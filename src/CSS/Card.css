@@ -1,0 +1,260 @@
+/* Existing Card Styles */
+.card {
+    background: white;
+    width: 30vw;
+    height: 40vh;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.cover-image {
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.cover-image-container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+}
+
+.no-image {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    font-size: 14px;
+}
+
+.item-name {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 1.5vh 2vw;
+}
+
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 12px;
+    max-width: 900px;
+    max-height: 90vh;
+    width: 100%;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+/* Carousel Styles */
+.carousel-container {
+    margin-bottom: 30px;
+}
+
+.carousel-main {
+    position: relative;
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    display: block;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-prev {
+    left: 15px;
+}
+
+.carousel-next {
+    right: 15px;
+}
+
+
+.no-image-modal {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+/* Item Details Styles */
+.item-details {
+    border-top: 1px solid #e9ecef;
+    padding-top: 20px;
+}
+
+.item-title {
+    font-size: 45px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    color: #333;
+}
+
+.item-info {
+    margin-bottom: 30px;
+}
+
+.item-type {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 300;
+    color: hsl(208, 98%, 49%);
+}
+
+.item-description {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.enquire-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.enquire-btn:hover {
+    background: #0056b3;
+    transform: translateY(-1px);
+}
+
+.enquire-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-overlay {
+        padding: 10px;
+    }
+
+    .modal-content {
+        max-height: 95vh;
+    }
+
+    .modal-body {
+        padding: 15px;
+    }
+
+    .carousel-image {
+        height: 250px;
+    }
+
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .carousel-prev {
+        left: 10px;
+    }
+
+    .carousel-next {
+        right: 10px;
+    }
+
+    .item-title {
+        font-size: 24px;
+    }
+
+    .info-row {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .info-label {
+        margin-bottom: 5px;
+        min-width: auto;
+    }
+
+}
